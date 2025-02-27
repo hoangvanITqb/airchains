@@ -29,9 +29,11 @@ chmod +x junctiond
 mv junctiond $HOME/go/bin/
 ```
 
-# Prepare cosmovisor directories
+**Prepare cosmovisor directories**
+```
 mkdir -p $HOME/.junction/cosmovisor/genesis/bin
 ln -s $HOME/.junction/cosmovisor/genesis $HOME/.junction/cosmovisor/current -f
+```
 
 # Copy binary to cosmovisor directory
 cp $(which junctiond) $HOME/.junction/cosmovisor/genesis/bin

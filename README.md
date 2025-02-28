@@ -35,9 +35,10 @@ mkdir -p $HOME/.junction/cosmovisor/genesis/bin
 ln -s $HOME/.junction/cosmovisor/genesis $HOME/.junction/cosmovisor/current -f
 ```
 
-# Copy binary to cosmovisor directory
+**Copy binary to cosmovisor directory**
+```
 cp $(which junctiond) $HOME/.junction/cosmovisor/genesis/bin
-
+```
 # Set node CLI configuration
 junctiond config chain-id junction
 junctiond config keyring-backend test

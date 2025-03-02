@@ -39,10 +39,12 @@ ln -s $HOME/.junction/cosmovisor/genesis $HOME/.junction/cosmovisor/current -f
 ```
 cp $(which junctiond) $HOME/.junction/cosmovisor/genesis/bin
 ```
-# Set node CLI configuration
+**Set node CLI configuration**
+```
 junctiond config chain-id junction
 junctiond config keyring-backend test
 junctiond config node tcp://localhost:26657
+```
 
 # Initialize the node
 junctiond init "Your Node Name" --chain-id junction

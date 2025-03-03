@@ -46,8 +46,10 @@ junctiond config keyring-backend test
 junctiond config node tcp://localhost:26657
 ```
 
-# Initialize the node
+**Initialize the node**
+```
 junctiond init "Your Node Name" --chain-id junction
+```
 
 # Download genesis and addrbook files
 curl -L https://snapshots-testnet.nodejumper.io/airchains/genesis.json > $HOME/.junction/config/genesis.json

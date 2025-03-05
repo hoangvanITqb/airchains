@@ -57,8 +57,10 @@ curl -L https://snapshots-testnet.nodejumper.io/airchains/genesis.json > $HOME/.
 curl -L https://snapshots-testnet.nodejumper.io/airchains/addrbook.json > $HOME/.junction/config/addrbook.json
 ```
 
-# Set seeds
+**Set seeds**
+```
 sed -i -e 's|^seeds *=.*|seeds = "575e98598e9813a26576759c7ef70fd38d2516a4@junction-testnet-rpc.synergynodes.com:15656,04e2fdd6ec8f23729f24245171eaceae5219aa91@airchains-testnet-seed.itrocket.net:19656,aeaf101d54d47f6c99b4755983b64e8504f6132d@airchain-testnet-peer.dashnode.org:28656,bb26fc8cef05cee75d4cae3f25e17d74c7913967@airchains-t.seed.stavr.tech:4476,df949a46ae6529ae1e09b034b49716468d5cc7e9@testnet-seeds.stakerhouse.com:13756,48887cbb310bb854d7f9da8d5687cbfca02b9968@35.200.245.190:26656,60133849b4c83531eb2d835970035a0f08868658@65.109.93.124:28156,df2a56a208821492bd3d04dd2e91672657c79325@airchain-testnet-peer.cryptonode.id:27656,04e2fdd6ec8f23729f24245171eaceae5219aa91@airchains-testnet-seed.itrocket.net:19656,3dc2f101876e1a26730f99c06a5a2eb6e2cc2349@65.21.69.53:33656"|' $HOME/.junction/config/config.toml
+```
 
 # Set minimum gas price
 sed -i -e 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.00025amf"|' $HOME/.junction/config/app.toml

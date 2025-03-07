@@ -67,12 +67,14 @@ sed -i -e 's|^seeds *=.*|seeds = "575e98598e9813a26576759c7ef70fd38d2516a4@junct
 sed -i -e 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.00025amf"|' $HOME/.junction/config/app.toml
 ```
 
-# Set pruning
+**Set pruning**
+```
 sed -i \
   -e 's|^pruning *=.*|pruning = "custom"|' \
   -e 's|^pruning-keep-recent *=.*|pruning-keep-recent = "100"|' \
   -e 's|^pruning-interval *=.*|pruning-interval = "17"|' \
   $HOME/.junction/config/app.toml
+```
 
 # Enable prometheus
 sed -i -e 's|^prometheus *=.*|prometheus = true|' $HOME/.junction/config/config.toml

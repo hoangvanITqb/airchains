@@ -76,9 +76,10 @@ sed -i \
   $HOME/.junction/config/app.toml
 ```
 
-# Enable prometheus
+**Enable prometheus**
+```
 sed -i -e 's|^prometheus *=.*|prometheus = true|' $HOME/.junction/config/config.toml
-
+```
 # Download latest chain data snapshot
 curl "https://snapshots-testnet.nodejumper.io/airchains/airchains_latest.tar.lz4" | lz4 -dc - | tar -xf - -C "$HOME/.junction"
 

@@ -80,8 +80,10 @@ sed -i \
 ```
 sed -i -e 's|^prometheus *=.*|prometheus = true|' $HOME/.junction/config/config.toml
 ```
-# Download latest chain data snapshot
+**Download latest chain data snapshot**
+```
 curl "https://snapshots-testnet.nodejumper.io/airchains/airchains_latest.tar.lz4" | lz4 -dc - | tar -xf - -C "$HOME/.junction"
+```
 
 # Install Cosmovisor
 go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.7.0

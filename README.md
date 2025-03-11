@@ -85,8 +85,10 @@ sed -i -e 's|^prometheus *=.*|prometheus = true|' $HOME/.junction/config/config.
 curl "https://snapshots-testnet.nodejumper.io/airchains/airchains_latest.tar.lz4" | lz4 -dc - | tar -xf - -C "$HOME/.junction"
 ```
 
-# Install Cosmovisor
+**Install Cosmovisor**
+```
 go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.7.0
+```
 
 # Create a service
 sudo tee /etc/systemd/system/airchains.service > /dev/null << EOF

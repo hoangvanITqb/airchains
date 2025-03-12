@@ -90,7 +90,8 @@ curl "https://snapshots-testnet.nodejumper.io/airchains/airchains_latest.tar.lz4
 go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.7.0
 ```
 
-# Create a service
+**Create a service**
+```
 sudo tee /etc/systemd/system/airchains.service > /dev/null << EOF
 [Unit]
 Description=Airchains node service
@@ -111,6 +112,7 @@ WantedBy=multi-user.target
 EOF
 sudo systemctl daemon-reload
 sudo systemctl enable airchains.service
+```
 
 # Start the service and check the logs
 sudo systemctl start airchains.service

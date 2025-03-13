@@ -13,14 +13,7 @@ curl -L https://go.dev/dl/go1.22.7.linux-amd64.tar.gz | sudo tar -xzf - -C /usr/
 echo 'export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin' >> $HOME/.profile
 source .profile
 ```
-Node Installation
 
-Node Name
-
-Your Node Name
-Port prefix
-
-266
 **Download binary**
 ```
 cd $HOME && mkdir -p go/bin/
@@ -114,10 +107,12 @@ sudo systemctl daemon-reload
 sudo systemctl enable airchains.service
 ```
 
-# Start the service and check the logs
+**Start the service and check the logs**
+```
 sudo systemctl start airchains.service
 sudo journalctl -u airchains.service -f --no-hostname -o cat
 Secure Server Setup (Optional)
+```
 
 # generate ssh keys, if you don't have them already, DO IT ON YOUR LOCAL MACHINE
 ssh-keygen -t rsa
